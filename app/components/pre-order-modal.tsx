@@ -87,131 +87,96 @@ export default function PreOrderModal({
           <>
             <DialogHeader>
               <DialogTitle className="text-2xl font-bold text-center">
-                Pre-Order Your Copy
+                فرم پیش ثبت نام
               </DialogTitle>
               <DialogDescription className="text-center">
-                Be among the first to receive "The Ultimate Guide to Success"
-                when it's released.
+                جزو اولین نفراتی باشید که کتاب رو دریافت میکنه
               </DialogDescription>
             </DialogHeader>
 
             <form onSubmit={handleSubmit} className="space-y-4 mt-4">
               <div className="grid grid-cols-1 gap-4">
-                <div className="space-y-2">
-                  <Label htmlFor="fullName">Full Name</Label>
+                <div className="space-y-2" dir="rtl">
+                  <Label htmlFor="fullName">نام و نام خانوادگی</Label>
                   <Input
                     id="fullName"
                     name="fullName"
                     value={formState.fullName}
                     onChange={handleChange}
-                    placeholder="John Doe"
+                    placeholder="نام و نام خانوادگی"
                     required
                   />
                 </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="email">Email</Label>
+                <div className="space-y-2" dir="rtl">
+                  <Label htmlFor="email">شماره همراه</Label>
+                  <Input
+                    id="phonenumber"
+                    name="phonenumber"
+                    type="number"
+                    value={formState.email}
+                    onChange={handleChange}
+                    placeholder="شماره همراه"
+                    required
+                  />
+                </div>
+                <div className="space-y-2" dir="rtl">
+                  <Label htmlFor="email">ایمیل</Label>
                   <Input
                     id="email"
                     name="email"
                     type="email"
                     value={formState.email}
                     onChange={handleChange}
-                    placeholder="john.doe@example.com"
+                    placeholder="ایمیل"
                     required
                   />
                 </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="address">Address</Label>
-                  <Input
-                    id="address"
-                    name="address"
-                    value={formState.address}
-                    onChange={handleChange}
-                    placeholder="123 Main St"
-                    required
-                  />
-                </div>
-
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-2 gap-4" dir="rtl">
                   <div className="space-y-2">
-                    <Label htmlFor="city">City</Label>
+                    <Label htmlFor="city">استان</Label>
                     <Input
                       id="city"
                       name="city"
                       value={formState.city}
                       onChange={handleChange}
-                      placeholder="New York"
+                      placeholder="استان"
                       required
                     />
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="zipCode">Zip Code</Label>
+                    <Label htmlFor="zipCode">شهرستان</Label>
                     <Input
                       id="zipCode"
                       name="zipCode"
                       value={formState.zipCode}
                       onChange={handleChange}
-                      placeholder="10001"
+                      placeholder="شهرستان"
                       required
                     />
                   </div>
                 </div>
+                <div className="space-y-2" dir="rtl">
+                  <Label htmlFor="address">آدرس دقیق</Label>
+                  <Input
+                    id="address"
+                    name="address"
+                    value={formState.address}
+                    onChange={handleChange}
+                    placeholder="آدرس دقیق"
+                    required
+                  />
+                </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="country">Country</Label>
+                <div className="space-y-2" dir="rtl">
+                  <Label htmlFor="country">کدپستی</Label>
                   <Input
                     id="country"
                     name="country"
                     value={formState.country}
                     onChange={handleChange}
-                    placeholder="United States"
+                    placeholder="کدپستی"
                     required
-                  />
-                </div>
-
-                <div className="space-y-3 pt-2">
-                  <Label>Edition</Label>
-                  <RadioGroup
-                    value={formState.edition}
-                    onValueChange={handleEditionChange}
-                    className="flex flex-col space-y-1"
-                  >
-                    <div className="flex items-center space-x-2">
-                      <RadioGroupItem value="standard" id="standard" />
-                      <Label htmlFor="standard" className="font-normal">
-                        Standard Edition - $24.99
-                      </Label>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <RadioGroupItem value="deluxe" id="deluxe" />
-                      <Label htmlFor="deluxe" className="font-normal">
-                        Deluxe Edition (Hardcover + Digital) - $39.99
-                      </Label>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <RadioGroupItem value="collector" id="collector" />
-                      <Label htmlFor="collector" className="font-normal">
-                        Collector's Edition (Signed Copy + Bonuses) - $59.99
-                      </Label>
-                    </div>
-                  </RadioGroup>
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="specialRequests">
-                    Special Requests (Optional)
-                  </Label>
-                  <Textarea
-                    id="specialRequests"
-                    name="specialRequests"
-                    value={formState.specialRequests}
-                    onChange={handleChange}
-                    placeholder="Any special instructions or requests..."
-                    className="resize-none"
-                    rows={3}
                   />
                 </div>
               </div>
@@ -219,15 +184,15 @@ export default function PreOrderModal({
               <DialogFooter className="pt-4">
                 <Button
                   type="button"
-                  variant="outline"
+                  className="bg-[#D00000] hover:bg-[#CCE3DE]"
                   onClick={() => onOpenChange(false)}
                   disabled={isSubmitting}
                 >
-                  Cancel
+                  لغو
                 </Button>
                 <Button
                   type="submit"
-                  className="bg-purple-600 hover:bg-purple-700"
+                  className="bg-[#3A5A40] hover:bg-[#A3B18A] w-56"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? (
@@ -252,10 +217,10 @@ export default function PreOrderModal({
                           d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                         ></path>
                       </svg>
-                      Processing...
+                      در حال اجرا...
                     </span>
                   ) : (
-                    "Complete Pre-Order"
+                    "پرداخت"
                   )}
                 </Button>
               </DialogFooter>
