@@ -277,26 +277,26 @@ export default function LandingPage() {
               <div className="h-[400px]">
                 <VideoPlayer />
               </div>
-              <div className="flex flex-col justify-center">
+              <div className="flex flex-col justify-center" dir="auto">
                 <h2 className="text-3xl font-bold tracking-tighter mb-4 text-center">
                   چرا باید این کتاب رو تهیه کنید؟
                 </h2>
-                <p className="text-muted-foreground mb-4 text-right">
+                <p className="text-muted-foreground mb-4 text-right" dir="auto">
                   این کتاب در ۷ فصل و با پوشش ۱۵۳ موضوع تخصصی نوشته شده تا یه
                   منبع کامل و کاربردی برای کار با RouterOS ورژن ۷ باشه. نوشتن
                   این کتاب دو دلیل مهم داشت:
                 </p>
-                <p className="text-muted-foreground mb-4 text-right">
+                <p className="text-muted-foreground mb-4 text-right" dir="auto">
                   اول، اینکه تو دنیای شبکه، مخصوصاً توی میکروتیک، همیشه یه کمبود
-                  جدی برای منابع فارسی بوده. خیلی از مطالب یا قدیمی بودن یا از
-                  دید مهندسی شبکه درست بررسی نشده بودن. خواستم این خلا رو پر کنم
-                  و یه مرجع درست و حسابی برای بچه‌های شبکه بسازم.
+                  جدی برای منابع فارسی بوده و خیلی از مطالب یا قدیمی بودن یا از
+                  دید مهندسی شبکه درست بررسی نشده بودن برای همین خواستم این خلا
+                  رو پر کنم و یه مرجع درست و حسابی برای بچه‌های شبکه بسازم.
                 </p>
-                <p className="text-muted-foreground text-right">
+                <p className="text-muted-foreground text-right" dir="auto">
                   دوم، اینکه مسیر تألیف کتابای تخصصی تو حوزه شبکه برای بقیه
-                  هموارتر بشه. اگر این کتاب بتونه باعث بشه بقیه متخصص‌ها هم وارد
-                  این مسیر بشن و توی زمینه‌های مختلف منابع فارسی قوی‌تری داشته
-                  باشیم، یعنی رسالتم رو درست انجام دادم.
+                  هموارتر بشه که اگر این کتاب بتونه باعث بشه بقیه متخصص‌ها هم
+                  وارد این مسیر بشن و توی زمینه‌های مختلف منابع فارسی قوی‌تری
+                  داشته باشیم، یعنی رسالتم رو درست انجام دادم.
                 </p>
               </div>
             </div>
