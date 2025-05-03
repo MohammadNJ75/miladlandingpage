@@ -16,8 +16,6 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { Textarea } from "@/components/ui/textarea";
 
 interface PreOrderModalProps {
   open: boolean;
@@ -29,11 +27,15 @@ export default function PreOrderModal({
   onOpenChange,
 }: PreOrderModalProps) {
   const [formState, setFormState] = useState({
-    fullName: "",
+    firstName: "",
+    familyName: "",
     email: "",
     address: "",
     city: "",
     zipCode: "",
+    province: "",
+    pelakNumber: "",
+    phoneNumber: "",
     country: "",
     edition: "standard",
     specialRequests: "",
@@ -46,6 +48,7 @@ export default function PreOrderModal({
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
+
     setFormState((prev) => ({ ...prev, [name]: value }));
   };
 
@@ -67,11 +70,15 @@ export default function PreOrderModal({
         setIsSubmitted(false);
         onOpenChange(false);
         setFormState({
-          fullName: "",
+          firstName: "",
+          familyName: "",
           email: "",
           address: "",
           city: "",
           zipCode: "",
+          pelakNumber: "",
+          phoneNumber: "",
+          province: "",
           country: "",
           edition: "standard",
           specialRequests: "",
@@ -96,26 +103,42 @@ export default function PreOrderModal({
 
             <form onSubmit={handleSubmit} className="space-y-4 mt-4">
               <div className="grid grid-cols-1 gap-4">
-                <div className="space-y-2" dir="rtl">
-                  <Label htmlFor="fullName">نام و نام خانوادگی</Label>
-                  <Input
-                    id="fullName"
-                    name="fullName"
-                    value={formState.fullName}
-                    onChange={handleChange}
-                    placeholder="نام و نام خانوادگی"
-                    required
-                  />
+                <div className="grid grid-cols-2 gap-4" dir="rtl">
+                  <div className="space-y-2">
+                    <Label htmlFor="firstName">نام</Label>
+                    <Input
+                      id="firstName"
+                      name="firstName"
+                      value={formState.firstName}
+                      onChange={handleChange}
+                      placeholder="نام"
+                      required
+                    />
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="familyName">نام خانوادگی</Label>
+                    <Input
+                      id="familyName"
+                      name="familyName"
+                      value={formState.familyName}
+                      onChange={handleChange}
+                      placeholder="نام خانوادگی"
+                      required
+                    />
+                  </div>
                 </div>
                 <div className="space-y-2" dir="rtl">
-                  <Label htmlFor="email">شماره همراه</Label>
+                  <Label htmlFor="phoneNumber">شماره همراه</Label>
                   <Input
-                    id="phonenumber"
-                    name="phonenumber"
-                    type="number"
-                    value={formState.email}
+                    id="phoneNumber"
+                    dir="rtl"
+                    name="phoneNumber"
+                    value={formState.phoneNumber}
                     onChange={handleChange}
                     placeholder="شماره همراه"
+                    type="tel"
+                    pattern=""
                     required
                   />
                 </div>
@@ -133,11 +156,11 @@ export default function PreOrderModal({
                 </div>
                 <div className="grid grid-cols-2 gap-4" dir="rtl">
                   <div className="space-y-2">
-                    <Label htmlFor="city">استان</Label>
+                    <Label htmlFor="province">استان</Label>
                     <Input
-                      id="city"
-                      name="city"
-                      value={formState.city}
+                      id="province"
+                      name="province"
+                      value={formState.province}
                       onChange={handleChange}
                       placeholder="استان"
                       required
@@ -145,11 +168,11 @@ export default function PreOrderModal({
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="zipCode">شهرستان</Label>
+                    <Label htmlFor="city">شهرستان</Label>
                     <Input
-                      id="zipCode"
-                      name="zipCode"
-                      value={formState.zipCode}
+                      id="city"
+                      name="city"
+                      value={formState.city}
                       onChange={handleChange}
                       placeholder="شهرستان"
                       required
@@ -167,24 +190,35 @@ export default function PreOrderModal({
                     required
                   />
                 </div>
-
-                <div className="space-y-2" dir="rtl">
-                  <Label htmlFor="country">کدپستی</Label>
-                  <Input
-                    id="country"
-                    name="country"
-                    value={formState.country}
-                    onChange={handleChange}
-                    placeholder="کدپستی"
-                    required
-                  />
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="space-y-2" dir="rtl">
+                    <Label htmlFor="zipCode">کدپستی</Label>
+                    <Input
+                      id="zipCode"
+                      name="zipCode"
+                      value={formState.zipCode}
+                      onChange={handleChange}
+                      placeholder="کدپستی"
+                      required
+                    />
+                  </div>
+                  <div className="space-y-2" dir="rtl">
+                    <Label htmlFor="pelakNumber">پلاک</Label>
+                    <Input
+                      id="pelakNumber"
+                      name="pelakNumber"
+                      value={formState.pelakNumber}
+                      onChange={handleChange}
+                      placeholder="(اختیاری)"
+                    />
+                  </div>
                 </div>
               </div>
 
-              <DialogFooter className="pt-4">
+              <DialogFooter className="pt-4 gap-4">
                 <Button
                   type="button"
-                  className="bg-[#D00000] hover:bg-[#CCE3DE]"
+                  className="bg-[#D00000] hover:bg-[#CCE3DE] sm:w-20 "
                   onClick={() => onOpenChange(false)}
                   disabled={isSubmitting}
                 >
@@ -192,7 +226,7 @@ export default function PreOrderModal({
                 </Button>
                 <Button
                   type="submit"
-                  className="bg-[#3A5A40] hover:bg-[#A3B18A] w-56"
+                  className="bg-[#3A5A40] hover:bg-[#A3B18A] sm:w-56 "
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? (
@@ -235,10 +269,12 @@ export default function PreOrderModal({
             <div className="h-16 w-16 rounded-full bg-green-100 flex items-center justify-center mb-4">
               <Check className="h-8 w-8 text-green-600" />
             </div>
-            <h3 className="text-2xl font-bold mb-2">Pre-Order Successful!</h3>
+            <h3 className="text-2xl font-bold mb-2">
+              ثبت نام با موفقیت انجام شد
+            </h3>
             <p className="text-center text-muted-foreground mb-6">
-              Thank you for your pre-order. We'll notify you when your book is
-              ready to ship.
+              از اعتماد شما سپاسگزاریم.به محض اینکه کتاب شما آماده شد به شما
+              اطلاع خواهیم داد.
             </p>
             <Button
               className="bg-purple-600 hover:bg-purple-700"
@@ -247,7 +283,7 @@ export default function PreOrderModal({
                 onOpenChange(false);
               }}
             >
-              Close
+              بستن
             </Button>
           </motion.div>
         )}

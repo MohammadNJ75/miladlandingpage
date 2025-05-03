@@ -26,7 +26,7 @@ export default function DiscountBadge() {
               <span className="text-sm md:text-base uppercase tracking-wider">
                 تخفیف
               </span>
-              <span className="text-2xl md:text-4xl leading-none">25%</span>
+              <span className="text-2xl md:text-4xl leading-none">50%</span>
               <span className="text-xs md:text-sm uppercase tracking-wider">
                 زمان
               </span>

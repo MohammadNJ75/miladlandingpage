@@ -55,10 +55,12 @@ export default function BookCarousel() {
         />
       </div>
       <div className="carousel" ref={carouselRef}>
-        <div className="carousel-item">ویدیوی آموزشی</div>
+        <div className="carousel-item">به همراه ویدیوی آموزشی</div>
         <div className="carousel-item">کاربردی</div>
-        <div className="carousel-item">پشتیبانی</div>
+        <div className="carousel-item"> دارای پشتیبانی </div>
         <div className="carousel-item"> RouterOS v7 مناسب</div>
+        <div className="carousel-item"> اولین کتاب مصور شبکه</div>
+        <div className="carousel-item"> برگرفته از تجربه</div>
       </div>
       <div className="book">
         <Image

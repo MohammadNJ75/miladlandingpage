@@ -12,7 +12,7 @@ const myFont = localFont({
 export const metadata: Metadata = {
   title: "پیش فروش کتاب میکروتیک",
   description: "بهترین کتاب میکروتیک ایران",
-  generator: "Nejat.co",
+  generator: "Nejati.co",
 };
 
 export default function RootLayout({
@@ -22,6 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fa" suppressHydrationWarning className={myFont.className}>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <body>
         <ThemeProvider
           attribute="class"

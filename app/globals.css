@@ -106,21 +106,26 @@ body {
 /* Position each item at a specific angle */
 .carousel-item:nth-child(1) {
   transform: translate(-50%, -50%) rotateY(0deg) translateZ(300px);
-  z-index: 20;
   background-color: #0d1b2a;
   font-size: 1.4rem;
 }
 
 .carousel-item:nth-child(2) {
-  transform: translate(-50%, -50%) rotateY(90deg) translateZ(300px);
+  transform: translate(-50%, -50%) rotateY(60deg) translateZ(300px);
 }
 
 .carousel-item:nth-child(3) {
-  transform: translate(-50%, -50%) rotateY(180deg) translateZ(300px);
+  transform: translate(-50%, -50%) rotateY(120deg) translateZ(300px);
 }
 
 .carousel-item:nth-child(4) {
-  transform: translate(-50%, -50%) rotateY(270deg) translateZ(300px);
+  transform: translate(-50%, -50%) rotateY(180deg) translateZ(300px);
+}
+.carousel-item:nth-child(5) {
+  transform: translate(-50%, -50%) rotateY(240deg) translateZ(300px);
+}
+.carousel-item:nth-child(6) {
+  transform: translate(-50%, -50%) rotateY(300deg) translateZ(300px);
 }
 
 .book {
@@ -162,31 +167,23 @@ body {
   }
 
   .carousel-item:nth-child(2) {
-    transform: translate(-50%, -50%) rotateY(45deg) translateZ(200px);
+    transform: translate(-50%, -50%) rotateY(60deg) translateZ(200px);
   }
 
   .carousel-item:nth-child(3) {
-    transform: translate(-50%, -50%) rotateY(90deg) translateZ(200px);
+    transform: translate(-50%, -50%) rotateY(120deg) translateZ(200px);
   }
 
   .carousel-item:nth-child(4) {
-    transform: translate(-50%, -50%) rotateY(135deg) translateZ(200px);
-  }
-
-  .carousel-item:nth-child(5) {
     transform: translate(-50%, -50%) rotateY(180deg) translateZ(200px);
   }
 
+  .carousel-item:nth-child(5) {
+    transform: translate(-50%, -50%) rotateY(240deg) translateZ(200px);
+  }
+
   .carousel-item:nth-child(6) {
-    transform: translate(-50%, -50%) rotateY(225deg) translateZ(200px);
-  }
-
-  .carousel-item:nth-child(7) {
-    transform: translate(-50%, -50%) rotateY(270deg) translateZ(200px);
-  }
-
-  .carousel-item:nth-child(8) {
-    transform: translate(-50%, -50%) rotateY(315deg) translateZ(200px);
+    transform: translate(-50%, -50%) rotateY(300deg) translateZ(200px);
   }
 }
 .circle {

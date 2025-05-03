@@ -246,14 +246,11 @@ export default function LandingPage() {
                     نویسنده : میلاد احمدی
                   </h1>
                   <p className="max-w-[600px] mx-auto text-muted-foreground md:text-xl">
-                    آخرین کتاب میکروتیکی که میخرید
+                    کاربردی ترین کتاب میکروتیکی که تهیه می کنید
                   </p>
-                  {/* <p className="max-w-[600px] mx-auto text-muted-foreground md:text-xl">  
-          نویسنده : میلاد احمدی{" "}  
-          </p> */}
-                  <div className="flex flex-col gap-2 min-[400px]:flex-row justify-center mt-6 relative ">
+                  <div className="flex flex-col gap-2 min-[400px]:flex-row justify-center mt-6 items-center">
                     <Button
-                      className="bg-[#0D1B2A] hover:bg-[#415A77] w-[125%] text-white font-semibold py-2 px-4 rounded transition-all duration-200 "
+                      className="bg-[#0D1B2A] hover:bg-[#415A77] w-[100%] sm:w-[125%]  text-white font-semibold py-2 px-4 rounded transition-all duration-200 "
                       onClick={() => setIsModalOpen(true)}
                     >
                       ثبت سفارش
