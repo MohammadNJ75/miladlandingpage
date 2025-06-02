@@ -152,7 +152,6 @@ export default function BookChapters() {
         { title: "Type OF NAT" },
         { title: "NAT Chain" },
         { title: "NAT Action" },
-        { title: "Simple Queue" },
       ],
     },
     {

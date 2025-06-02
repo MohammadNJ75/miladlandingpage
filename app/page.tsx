@@ -241,7 +241,7 @@ export default function LandingPage() {
               <div className="flex flex-col items-center justify-center">
                 <BookCarousel />
 
-                <div className="mt-16 text-center space-y-4">
+                <div className="mt-16 md:mt-8 text-center space-y-4">
                   <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl border-b-2 border-gray-300 pb-2 mb-4 transition-all duration-300 hover:border-blue-500">
                     نویسنده : میلاد احمدی
                   </h1>
@@ -324,7 +324,7 @@ export default function LandingPage() {
             <span className="text-lg font-bold">MiladAhmadi</span>
           </div>
           <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
-            © 2025 NejatiCo. All rights reserved.
+            © 2025 NejatiTech. All rights reserved.
           </p>
         </div>
       </footer>
