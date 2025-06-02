@@ -17,7 +17,7 @@ export default function LandingPage() {
     <div className="flex min-h-[100dvh] flex-col">
       <main className="flex-1">
         {/* Book Section with Animated Background Shapes */}
-        <section className="w-full h-screen py-12 md:py-24 lg:py-32 xl:py-36 flex items-center justify-center relative overflow-hidden">
+        <section className="w-full h-auto py-12 md:py-24 lg:py-32 xl:py-36 flex items-center justify-center relative overflow-hidden">
           {/* Background Animated Shapes */}
           <div className="absolute inset-0 z-0 flex items-center justify-center">
             {/* Circle 1 */}
@@ -241,13 +241,27 @@ export default function LandingPage() {
               <div className="flex flex-col items-center justify-center">
                 <BookCarousel />
 
-                <div className="mt-16 md:mt-8 text-center space-y-4">
+                <div className=" text-center space-y-4">
                   <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl border-b-2 border-gray-300 pb-2 mb-4 transition-all duration-300 hover:border-blue-500">
                     نویسنده : میلاد احمدی
                   </h1>
-                  <p className="max-w-[600px] mx-auto text-muted-foreground md:text-xl">
+                  <p className="max-w-[600px] mx-auto text-muted-foreground md:text-xl text-slate-900">
                     کاربردی ترین کتاب میکروتیکی که تهیه می کنید
                   </p>
+                  <div className="flex flex-col items-center space-y-3 pt-2">
+                    {/* Original Price - Crossed Out */}
+                    <div
+                      className="flex items-center space-x-2 gap-3 bg-gradient-to-r from-[#283048] to-[#859398] p-1 rounded-md"
+                      dir="rtl"
+                    >
+                      <span className="text-2xl md:text-3xl  text-gray-900 font-semibold  dark:text-green-400">
+                        750,۰۰۰ تومان
+                      </span>
+                      <span className="text-xl md:text-2xl  font-thin text-gray-400 line-through decoration-gray-500 decoration-2">
+                        1,500,۰۰۰ تومان
+                      </span>
+                    </div>
+                  </div>
                   <div className="flex flex-col gap-2 min-[400px]:flex-row justify-center mt-6 items-center">
                     <Button
                       className="bg-[#0D1B2A] hover:bg-[#415A77] w-[100%] sm:w-[125%]  text-white font-semibold py-2 px-4 rounded transition-all duration-200 "
@@ -324,7 +338,16 @@ export default function LandingPage() {
             <span className="text-lg font-bold">MiladAhmadi</span>
           </div>
           <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
-            © 2025 NejatiTech. All rights reserved.
+            © 2025
+            <a
+              href="https://www.instagram.com/nejatifrontend"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-black font-semibold hover:text-red-500 transition-colors duration-300"
+            >
+              Designed By NejatiTech.
+            </a>
+            All rights reserved.
           </p>
         </div>
       </footer>

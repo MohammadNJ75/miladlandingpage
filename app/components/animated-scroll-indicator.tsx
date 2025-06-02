@@ -17,9 +17,9 @@ export default function AnimatedScrollIndicator() {
     <div
       ref={indicatorRef}
       onClick={scrollToSection}
-      className="flex flex-col items-center cursor-pointer animate-bounce absolute top-full mt-10 md:mt-5"
+      className="flex flex-col items-center cursor-pointer animate-bounce absolute top-full mt-2 md:mt-5"
     >
-      <p className="text-[#778DA9]-600 font-medium mb-2">جزئیات بیشتر</p>
+      <p className="text-[#778DA9]-600 font-medium  md:mb-2">جزئیات بیشتر</p>
       <ChevronDown className="h-6 w-6 text-[#778DA9]-600" />
     </div>
   );
